@@ -1,5 +1,6 @@
 # 第一个程序 hello world
-print("hello world")
+#print("hello world")
+
 
 # 变量名命名的规范
 # 变量名只可以包含 字母、数字、下划线。并且只有 字母、下划线可以开头
@@ -8,11 +9,11 @@ print("hello world")
 # 变量名不能使用python的一些关键字 就像 print 函数  这是python的保留字
 
 
-# 我们用一个变量来存 hello world
+# 我们用一个变量message来存 hello world!!
 message = "hello world!!"
 print(message)
 
-# 变量的值是可以改变的
+# 变量变量 顾名思义变量是可以变的 即变量的值是可以改变的
 message = "hello python!!"
 print(message)
 
