@@ -50,7 +50,8 @@ print("我是\\nexample 1")
 
 # 4.如果转义字符很多，难道我们都要加\吗?
 # 我们可以使用原生字符串 就是我们传入什么输出的就是什么 像\n这种转义字符不会给识别出来,就当成普通字符
-print(r"\ndsfsdaf\nsdfdsaf\t")
+print(r"\ndsfsdaf\nsdfdsaf\t") # \ndsfsdaf\nsdfdsaf\t
+print(R"\ndsfsdaf\nsdfdsaf\t") # \ndsfsdaf\nsdfdsaf\t
 
 #字符串的运算
 # 1.拼接字符串 使用"+"
@@ -72,3 +73,10 @@ print("hello world"[-1]) # o
 # 我们来获取下 hello这一截字符串
 print("hello world"[0:4]) # hell
 print("hello world"[0:5]) # hello
+
+# 5.如果截取某个下标后面的全部字符串
+# 我们截取"hello "后面的全部字符串 [x:]
+print("hello c# python java rust"[6:]) # c# python java rust
+# 同理 假如想截取rust前面的全部字符串
+print("hello c# python java rust"[:-4]) # hello c# python java
+
