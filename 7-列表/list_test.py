@@ -99,3 +99,4 @@ print(["hello", "python"] + ["c#", "c++"])  # ['hello', 'python', 'c#', 'c++']
 
 # []*正整型=[] 列表会将列表内的元素重复整数倍
 print(["hello", "boy"] * 3)  # ['hello', 'boy', 'hello', 'boy', 'hello', 'boy']
+
