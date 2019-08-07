@@ -24,3 +24,17 @@ tuple4 = ("a", "b", "c")
 print(tuple4[0])  # a
 print(tuple4[0:])  # ('a', 'b', 'c')
 print(tuple4[0:2])  # ('a', 'b')
+
+# 元组的修改
+# 元组的修改只能通过重新赋值的方式
+tuple5 = ('nice', 'to', 'meet', 'you')
+print(tuple5)  # ('nice', 'to', 'meet', 'you')
+
+#元组的元素不允许修改
+#tuple5[0]='a' TypeError: 'tuple' object does not support item assignment
+
+tuple5 = ('hello','every','body')
+print(tuple5)  # 'hello', 'every', 'body')
+
+
+
