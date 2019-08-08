@@ -34,7 +34,15 @@ print(tuple5)  # ('nice', 'to', 'meet', 'you')
 #tuple5[0]='a' TypeError: 'tuple' object does not support item assignment
 
 tuple5 = ('hello','every','body')
-print(tuple5)  # 'hello', 'every', 'body')
+print(tuple5)  # ('hello', 'every', 'body')
 
+# 元组的删除
+# 元组的元素时不允许删除的，只能删除整个元组
+tuple6 = (1,'5','a')
+print(tuple6)  # (1, '5', 'a')
+del tuple6 # 删除元组tuple6
+
+# NameError: name 'tuple6' is not defined
+#print("删除后的tuple6："+tuple6)
 
 
