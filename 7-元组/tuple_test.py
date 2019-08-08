@@ -45,4 +45,24 @@ del tuple6 # 删除元组tuple6
 # NameError: name 'tuple6' is not defined
 #print("删除后的tuple6："+tuple6)
 
+# 元组运算符
+# 计算元组的长度 使用len()函数
+tuple7 = (1, 5, 654, 6, 54)
+length = len(tuple7)
+print(length)  # 5
 
+# 元组的连接 使用"+"号
+print((1, 2, 3)+(4, 5, 6))   # (1, 2, 3, 4, 5, 6)
+
+# 元组的重复 使用 "*"号
+print(('hello', )*3)  # ('hello', 'hello', 'hello')
+
+# 判断某个值是否存在于元组中 使用 "in" 关键字
+print(3 in (1, 2, 3))  # True
+
+# 判断某个值是否不存在于元组中 使用 "not in" 关键字
+print(4 not in (1, 2, 3))  # True
+
+# 迭代遍历元组
+for x in (1, 2, 3):
+    print(x)  # 1 2 3
