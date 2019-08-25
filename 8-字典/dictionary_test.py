@@ -7,7 +7,7 @@ print(dict1)  # {'a': 1, 'b': '3'}
 print(type(dict1))  # <class 'dict'>
 
 # 字典的访问
-dict2={"name": "tom", "age": 12}
+dict2 = {"name": "tom", "age": 12}
 print(dict2)  # 'name': 'tom', 'age': 12}
 print(dict2["name"])  # tom
 print(dict2["age"])  # 12
@@ -20,10 +20,11 @@ print(dict2["age"])  # 12
 dict3 = {"name": "david", "age": 18}
 print(dict3)  # {'name': 'david', 'age': 18}
 dict3["name"] = "atom"  # 修改dict3中键名为name的值为atom
-dict3["age"] = 20  # # 修改dict3中键名为age的值为20
+dict3["age"] = 20  # 修改dict3中键名为age的值为20
 print(dict3)  # {'name': 'atom', 'age': 20}
 
 # 字典的删除 使用del关键字可以删除某个键值对 也可以删除整个字典
+
 # 删除某个键值对
 dict4 = {"name": "bob", "age": 18}
 print(dict4)  # {'name': 'bob', 'age': 18}
