@@ -1,6 +1,3 @@
-
-
-
 # Set集合是一个无序的不重复元素序列。
 # set集合的创建
 # 方式1 通过 {value1,value2,..}创建
@@ -28,16 +25,16 @@ print(type(set()))  # <class 'set'>
 
 # set集合添加元素
 # 通过add()方法
-set3 = {1,2,3}
+set3 = {1, 2, 3}
 print(set3)  # {1, 2, 3}
-set3.add(4) # set3添加一个值为4的元素
+set3.add(4)  # set3添加一个值为4的元素
 print(set3)  # {1, 2, 3, 4}
 
 # 通过update()方法 且参数可以是列表，元组，字典等
 set4 = {1, 2, 3}
 print(set3)
 # 添加不可迭代的数据类型
-#set4.update(6) # TypeError: 'int' object is not iterable
+# set4.update(6) # TypeError: 'int' object is not iterable
 
 # 添加可迭代的数据类型
 # 添加列表
@@ -49,7 +46,7 @@ set4.update((1, 6, 7))
 print(set4)  # {1, 2, 3, 4, 5, 6, 7}
 
 # 添加字典 只添加字典的键名 键值不添加进集合中
-set4.update({"a": 8,"c":9})
+set4.update({"a": 8, "c": 9})
 print(set4)  # {1, 2, 3, 4, 5, 6, 7, 'c', 'a'}
 
 # set集合元素的移除
@@ -59,7 +56,7 @@ print(set5)  # {1, 2, 3}
 set5.remove(1)
 print(set5)  # {2, 3}
 
-#set5.remove("a")  # TypeError: descriptor 'remove' requires a 'set' object but received a 'str'
+# set5.remove("a")  # TypeError: descriptor 'remove' requires a 'set' object but received a 'str'
 
 # 2.通过discard()方法 移除不存在的元素 程序不会报错
 set6 = {1, 2, 3}
@@ -68,7 +65,7 @@ set6.discard('a')
 # 3.通过pop()方法 随机删除一个set集合中的元素
 set7 = {1, 2, 3}
 val = set7.pop()
-print(val) # 1
+print(val)  # 1
 print(set7)  # {2, 3}
 
 # 获取set集合元素个数
@@ -82,7 +79,30 @@ set9.clear()
 print(set9)  # set()
 
 # 判断元素是否在set集合中
-set10 = {1,2,3}
+set10 = {1, 2, 3}
 print(set10)
 print(1 in set10)  # True
 print(10 in set10)  # False
+
+# 计算两个集合的差集 可以通过"-"运算符
+set10 = {1, 2, 3, 4}
+set11 = {3, 4}
+cha_set1 = set10 - set11
+print(cha_set1)  # {1, 2}
+
+cha_set2 = set11 - set10
+print(cha_set2)  # set()
+
+# 计算两个集合的交集 可以通过"&"运算符
+set12 = {1, 2, 3}
+set13 = {3, 4}
+jia_set = set12 & set13
+print(jia_set)  # {3}
+
+# 计算两个集合的并集 元素不重复 可以通过"|"运算符
+set14 = {1, 2, 3, 4, 5}
+set15 = {3, 4, 6, 7}
+bing_set = set14 | set15
+print(bing_set)  # 1, 2, 3, 4, 5, 6, 7}
+
+
