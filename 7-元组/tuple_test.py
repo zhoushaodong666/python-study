@@ -10,7 +10,7 @@ print(tuple1)  # ()
 # (1)和(1)python既可以认为是int类型的数字1，也可以认为是一个元素的元组
 # 所以在定义只含有一个元素的元组,一个元素也要在后面加上逗号，这样python编译器才会识别为元组
 print(type(1))  # <class 'int'>
-tuple2 = (1,)   # <class 'tuple'>
+tuple2 = (1,)
 
 print(type(tuple2))  # <class 'tuple'>
 
@@ -37,7 +37,7 @@ tuple5 = ('hello','every','body')
 print(tuple5)  # ('hello', 'every', 'body')
 
 # 元组的删除
-# 元组的元素时不允许删除的，只能删除整个元组
+# 元组的元素时不允许删除的，只能使用del语句删除整个元组
 tuple6 = (1,'5','a')
 print(tuple6)  # (1, '5', 'a')
 del tuple6 # 删除元组tuple6
