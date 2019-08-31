@@ -17,6 +17,7 @@ for x in it2:
 # 1 2 3 4
 
 # 	使用next()函数
+
 list3 = [1, 2, 3, 4]
 it3 = iter(list3)
 while True:
@@ -51,6 +52,8 @@ while True:
         print(next(f), end=" ")
     except StopIteration:
         sys.exit()
+# 输出结果
+# 0 1 1 2 3 5 8 13 21 34 55
 
 
 
