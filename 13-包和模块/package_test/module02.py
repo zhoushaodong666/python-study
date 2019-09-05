@@ -1,2 +1,3 @@
-import module01
-print(module01.a)
+a2 = '1'
+b2 = '2'
+c2 = '3'
