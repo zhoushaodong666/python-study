@@ -20,7 +20,12 @@ def printHelloWorld():
     print("HelloWorld")
 
 
-printHelloWorld()  # HelloWorld
+print(printHelloWorld())
+# 打印结果 首先printHelloWorld()函数调用先执行print("HelloWorld")，打印出HelloWorld，
+# 然后再执行print(printHelloWorld())，因为printHelloWorld()函数没有return返回值,所以默认return None，所以打印None
+
+# HelloWorld
+# None
 
 
 # 定义一个含有返回值的函数
