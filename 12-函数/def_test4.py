@@ -50,5 +50,14 @@ printStudent("卡特",28)
 # 4.不定长参数
 # 你可能需要一个函数能处理比当初声明时更多的参数
 # 加了星号 * 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数
-def manyParam():
-    pass
+def manyParam(arg1,*tuple_args):
+    print(arg1)
+    print(tuple_args)
+    print(type(tuple_args))
+
+manyParam(1,2,3,4,5)
+# 除了第1个args变量有命名，其他2-5参数未命名，则全部放进不定长参数tuple_args中，这是一个元组
+# 输出结果
+# 1
+# (2, 3, 4, 5)
+# <class 'tuple'>
