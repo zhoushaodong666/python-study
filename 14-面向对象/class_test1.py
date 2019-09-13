@@ -17,8 +17,19 @@ class Student():
     def printHello(self):
         print("hello")
 
+
+# 类的对象
+# 类是抽象的,实例对象是具体。 就好像手机设计图一样是抽象的,拿到手里的苹果手机是具体的。
+# 格式：
+"""
+x = ClassName()
+"""
+
+# 实例化一个Student类的对象
 s = Student()
-s.printHello()
+
+
+
 
 
 
