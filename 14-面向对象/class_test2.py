@@ -41,9 +41,6 @@ class Person:
     des="这是一个Person类"
 
     def __init__(self, name, age):
-        # 初始化类的属性
-
-
 
         # 使用self.xx的方式 将形参的值保存到实例对象的实例变量中
         self.name = name
@@ -75,9 +72,15 @@ print(Person.des2) #  这是一个Person类2
 
 print("=====================")
 
-# 5.实例变量，定义在方法内部，通过【self(实例).变量名】来访问实例变量
-print(p.name)  # 小丽
-print(p.age)  # 16
+# 5.实例变量，定义在方法内部，变量是保存在实例对象中的，通过【self(实例).变量名】来访问实例变量
+p2 = Person("小白",18)
+p3 = Person("小红",20)
+
+print(p2.name)  # 小白
+print(p2.age)  # 18
+
+print(p3.name)  # 小红
+print(p3.age)  # 20
 
 print("=====================")
 
