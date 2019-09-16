@@ -37,18 +37,15 @@ s.printTest()
 # 每次实例化类对象都会调用__init__()方法
 
 class Person:
-    # 类的属性
-    name = ""
-    age = 0
+    # 类的属性/类的变量
+    des="这是一个Person类"
 
     def __init__(self, name, age):
         # 初始化类的属性
 
-        # 错误写法 无法改变类的属性
-        #name = name
-        #age = age
 
-        # 正确写法 使用self.xx的方式访问对象的属性
+
+        # 使用self.xx的方式 将形参的值保存到实例对象的实例变量中
         self.name = name
         self.age = age
         print("我是__init__方法")
@@ -56,18 +53,35 @@ class Person:
         print("age:" + str(age))
         # return "person"
 
+    def printPerson(self):
+        self.ha = "df"
+        pass
+        #print("类变量name:"+name)
+
+
 
 # 实例化类对象 会自动调用一次__init__()方法
 p = Person("小丽", 16)
 # 我是__init__方法
 # name:小丽
 # age:16
-print(p.name)
-print(p.age)
 
 print("=====================")
 
-# 构造方法也可以自己显式的调用
+# 4.类变量，定义在类中且在方法之外，Person类的变量des就是类变量,通过【类名.变量名】来访问变量
+print(Person.des) # 这是一个Person类
+Person.des2 = "这是一个Person类2"
+print(Person.des2) #  这是一个Person类2
+
+print("=====================")
+
+# 5.实例变量，定义在方法内部，通过【self(实例).变量名】来访问实例变量
+print(p.name)  # 小丽
+print(p.age)  # 16
+
+print("=====================")
+
+# 6.构造方法也可以自己显式的调用
 p.__init__("小白", 18)
 # 我是__init__方法
 # name:小白
