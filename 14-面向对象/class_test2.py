@@ -39,12 +39,13 @@ s.printTest()
 class Person:
     # 类的属性/类的变量
     des="这是一个Person类"
-
+    name = 'jason'
     def __init__(self, name, age):
 
         # 使用self.xx的方式 将形参的值保存到实例对象的实例变量中
         self.name = name
         self.age = age
+        self.test = "test"
         print("我是__init__方法")
         print("name:" + name)
         print("age:" + str(age))
@@ -84,7 +85,15 @@ print(p3.age)  # 20
 
 print("=====================")
 
-# 6.构造方法也可以自己显式的调用
+# 6.类变量和实例变量的访问顺序
+
+# 使用实例对象访问变量 优先从实例变量中找 没有再向上找类变量
+print(p3.des)  # 这是一个Person类
+print(p3.name)  # 小红
+print(Student.age)  # 0
+print(Student.name) # ''
+print("=====================")
+# 7.构造方法也可以自己显式的调用
 p.__init__("小白", 18)
 # 我是__init__方法
 # name:小白
