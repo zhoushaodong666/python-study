@@ -14,7 +14,8 @@ class Student():
 
 # 3.类的方法
 # 类中定义的函数称为方法
-# 类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是 self
+# 类的方法与普通的函数只有一个特别的区别——它们必须有一个额外的第一个参数名称, 按照惯例它的名称是【self】,也可以是其他名称.
+# self指向调用类的方法的实例对象
 # 格式：
 """
 def methodName(self):
@@ -83,6 +84,10 @@ print(p2.age)  # 18
 print(p3.name)  # 小红
 print(p3.age)  # 20
 
+# 内置变量__dict__可以查看pyhton类实例的全部实例变量
+print("p2的全部实例变量",p2.__dict__)  # p2的全部实例变量 {'name': '小白', 'age': 18, 'test': 'test'}
+print("p3的全部实例变量",p3.__dict__)  # p3的全部实例变量 {'name': '小红', 'age': 20, 'test': 'test'}
+
 print("=====================")
 
 # 6.类变量和实例变量的访问顺序
@@ -93,6 +98,7 @@ print(p3.name)  # 小红
 print(Student.age)  # 0
 print(Student.name) # ''
 print("=====================")
+
 # 7.构造方法也可以自己显式的调用
 p.__init__("小白", 18)
 # 我是__init__方法
@@ -101,3 +107,5 @@ p.__init__("小白", 18)
 
 # 构造方法的返回值只能是None,不能是其他的。None一般不写,函数会自动返回。
 # print(p)  # TypeError: __init__() should return None, not 'str'
+
+
