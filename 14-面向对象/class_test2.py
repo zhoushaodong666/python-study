@@ -57,6 +57,16 @@ class Person:
         pass
         #print("类变量name:"+name)
 
+    def printObjectMethod(self):
+        print("实例方法")
+
+
+    @classmethod
+    def classMethodName(cls):
+        print("classMethodName")
+        print("类的属性 des:",cls.des)
+        cls.printObjectMethod()
+
 
 
 # 实例化类对象 会自动调用一次__init__()方法
@@ -107,5 +117,13 @@ p.__init__("小白", 18)
 
 # 构造方法的返回值只能是None,不能是其他的。None一般不写,函数会自动返回。
 # print(p)  # TypeError: __init__() should return None, not 'str'
+
+# 8.类的方法 使用classmethod的修饰符定义,classmethod修饰符对应的函数不需要实例化，不需要 self 参数，但第一个参数需要是表示自身类的 cls 参数，可以来调用类的属性，类的方法，实例化对象等
+# 格式：
+"""
+@classmethod
+def classMethodName(cls):
+    pass
+"""
 
 
