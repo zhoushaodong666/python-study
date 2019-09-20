@@ -39,10 +39,10 @@ s.printTest()
 
 class Person:
     # 类的属性/类的变量
-    des="这是一个Person类"
+    des = "这是一个Person类"
     name = 'jason'
-    def __init__(self, name, age):
 
+    def __init__(self, name, age):
         # 使用self.xx的方式 将形参的值保存到实例对象的实例变量中
         self.name = name
         self.age = age
@@ -55,17 +55,16 @@ class Person:
     def printPerson(self):
         self.ha = "df"
         pass
-        #print("类变量name:"+name)
+        # print("类变量name:"+name)
 
     def printObjectMethod(self):
         print("实例方法")
 
-
+    # 类方法
     @classmethod
     def classMethodName(cls):
-        print("classMethodName")
-        print("类的属性 des:",cls.des)
-        cls.printObjectMethod()
+        print("classMethodName 类的方法执行")
+        print("类的属性 des:", cls.des)
 
 
 
@@ -78,15 +77,15 @@ p = Person("小丽", 16)
 print("=====================")
 
 # 4.类变量，定义在类中且在方法之外，Person类的变量des就是类变量,通过【类名.变量名】来访问变量
-print(Person.des) # 这是一个Person类
+print(Person.des)  # 这是一个Person类
 Person.des2 = "这是一个Person类2"
-print(Person.des2) #  这是一个Person类2
+print(Person.des2)  # 这是一个Person类2
 
 print("=====================")
 
 # 5.实例变量，定义在方法内部，变量是保存在实例对象中的，通过【self(实例).变量名】来访问实例变量
-p2 = Person("小白",18)
-p3 = Person("小红",20)
+p2 = Person("小白", 18)
+p3 = Person("小红", 20)
 
 print(p2.name)  # 小白
 print(p2.age)  # 18
@@ -95,8 +94,8 @@ print(p3.name)  # 小红
 print(p3.age)  # 20
 
 # 内置变量__dict__可以查看pyhton类实例的全部实例变量
-print("p2的全部实例变量",p2.__dict__)  # p2的全部实例变量 {'name': '小白', 'age': 18, 'test': 'test'}
-print("p3的全部实例变量",p3.__dict__)  # p3的全部实例变量 {'name': '小红', 'age': 20, 'test': 'test'}
+print("p2的全部实例变量", p2.__dict__)  # p2的全部实例变量 {'name': '小白', 'age': 18, 'test': 'test'}
+print("p3的全部实例变量", p3.__dict__)  # p3的全部实例变量 {'name': '小红', 'age': 20, 'test': 'test'}
 
 print("=====================")
 
@@ -106,7 +105,7 @@ print("=====================")
 print(p3.des)  # 这是一个Person类
 print(p3.name)  # 小红
 print(Student.age)  # 0
-print(Student.name) # ''
+print(Student.name)  # ''
 print("=====================")
 
 # 7.构造方法也可以自己显式的调用
@@ -125,5 +124,8 @@ p.__init__("小白", 18)
 def classMethodName(cls):
     pass
 """
+Person.classMethodName()
+# classMethodName 类的方法执行
+# 类的属性 des: 这是一个Person类
 
 
