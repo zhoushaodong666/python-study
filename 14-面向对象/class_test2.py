@@ -66,6 +66,10 @@ class Person:
         print("classMethodName 类的方法执行")
         print("类的属性 des:", cls.des)
 
+    @staticmethod
+    def staticMethodName():
+        print("staticMethodName 静态方法执行")
+
 
 
 # 实例化类对象 会自动调用一次__init__()方法
@@ -124,8 +128,29 @@ p.__init__("小白", 18)
 def classMethodName(cls):
     pass
 """
+
+#  类名调用类的方法
 Person.classMethodName()
 # classMethodName 类的方法执行
 # 类的属性 des: 这是一个Person类
 
+# 实例对象调用类的方法
+p.classMethodName()
+# classMethodName 类的方法执行
+# 类的属性 des: 这是一个Person类
 
+
+# 9.静态方法
+# 使用@staiticmethod来修饰一个方法，该方法不强制传递参数
+# 格式：
+"""
+@staticmethod
+    def staticMethodName():
+        pass
+"""
+print("=============")
+# 使用类名调用静态方法
+Person.staticMethodName()  # staticMethodName 静态方法执行
+
+# 使用实例对象调用静态方法
+p.staticMethodName()  # staticMethodName 静态方法执行
