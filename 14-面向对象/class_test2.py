@@ -68,6 +68,8 @@ class Person:
 
     @staticmethod
     def staticMethodName():
+        # 访问类变量
+        print(Person.des)
         print("staticMethodName 静态方法执行")
 
 
@@ -150,7 +152,11 @@ p.classMethodName()
 """
 print("=============")
 # 使用类名调用静态方法
-Person.staticMethodName()  # staticMethodName 静态方法执行
+Person.staticMethodName()
+# 这是一个Person类
+# staticMethodName 静态方法执行
 
 # 使用实例对象调用静态方法
-p.staticMethodName()  # staticMethodName 静态方法执行
+p.staticMethodName()
+# 这是一个Person类
+# staticMethodName 静态方法执行
