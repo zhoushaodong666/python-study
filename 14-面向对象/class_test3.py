@@ -1,13 +1,22 @@
-# 继承 pyhton的类可以继承 继承来自父类的特性 然后自己可以扩展自己的特性
-# 假如车是父类,那么四轮汽车,三轮车就是父类,继承父类是车的特性,然后自己还扩展了是四轮还是三轮的特性
-# 格式
-"""
-class FatherClass:
-    # 类主体
+# 成员的可见性
+
+class Student2:
+    name = ""
+    age = 0
+    __score = 0
+
+    def __init__(self):
+        print("__init__ 执行")
+
+    def __method(self):
+        print("__method 执行")
 
 
+# 私有的成员  不给外界访问 只能在类的内部访问
+# 私有用"__"（两个下划线）在变量名或者方法名前加上 eg: __name = ""  def __defName():pass
 
-class ChildClass(FatherClass):
-    # 类主体
-
-"""
+# 外界访问私有成员会报异常
+s1 = Student2()
+print(s1.name,s1.age)
+#print(s1.__score)  # AttributeError: 'Student2' object has no attribute '__score'
+#s1.__method()  # AttributeError: 'Student2' object has no attribute '__method'
