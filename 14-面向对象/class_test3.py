@@ -1,6 +1,6 @@
 # 成员的可见性
 
-class Student2:
+class Student2():
     name = ""
     age = 0
 
