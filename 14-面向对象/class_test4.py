@@ -29,13 +29,16 @@ class Student(Person):
     pass
 
 #  __init__() missing 2 required positional arguments: 'name' and 'age'
-# 说明Student类从父类Person继承了__init__()方法
-s1 = Student()
+# 说明Student类从父类Person继承了__init__()方法和类变量、实例变量
+# s1 = Student()
 
-# print(s1.name)
-# print(s1.age)
-# print(s1.sum)
+s1 = Student("小白",18)
+print(s1.sum)
+print(s1.name)
+print(s1.age)
 print(Person.sum)
+
+
 
 
 
