@@ -28,6 +28,7 @@ print(content1) # I am a file
 file1.close()
 
 # 方式2：不传读取模式参数"r"
+# 省略open()方法第2个参数，因为参数默认是"r"
 # 【不推荐】
 file2 = open("file1.txt")
 content2 = file2.read()
