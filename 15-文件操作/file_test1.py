@@ -60,17 +60,36 @@ with open("file_child/file2.txt") as file4:
 all_path = "E:/Coding/pycharm_project/python-study/15-文件操作/file_child/file2.txt"
 with open(all_path) as file5:
     content5 = file5.read()
-    print(content5)
+    print(content5)  # I am file_child/file2.txt
+
 
 # 3.逐行读取文件内容
-
 with open("file3.txt") as file6:
     for line_content in file6:
         #print(line_content) 输出内容有空白行隔开 因为文件一个换行符，print()一个换行符
         # 要消除这些多余的空白行，可在 print 语句中使用 rstrip()
         print(line_content.rstrip())
+        # 输出结果
+        # I am file3.txt - 1
+        # I am file3.txt - 2
+        # I am file3.txt - 3
+        # I am file3.txt - 4
+        # I am file3.txt - 5
+        # I am file3.txt - 6
+        # I am file3.txt - 7
+        # I am file3.txt - 8
+        # I am file3.txt - 9
+        # I am file3.txt - 10
 
 
+# 4.创建一个包含文件各行内容的列表
+# with..as 创建的对象只能with内使用，外部如果想使用，我们需要先把文件内容保存下来
+# readlines()返回一个包含文件的列表
+with open("file3.txt") as file6:
+    lines = file6.readlines()
+
+print(type(lines))  # <class 'list'>
+print(lines)  # ['I am file3.txt - 1\n', 'I am file3.txt - 2\n', # 'I am file3.txt - 3\n', 'I am file3.txt - 4\n', 'I am file3.txt - 5\n', 'I am file3.txt - 6\n', 'I am file3.txt - 7\n', 'I am file3.txt - 8\n', 'I am file3.txt - 9\n', 'I am file3.txt - 10']
 
 
 
