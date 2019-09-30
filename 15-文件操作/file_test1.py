@@ -48,4 +48,18 @@ with open("file1.txt") as file3:
     print(content3) # I am a file
 
 
+# 读取子文件夹下的文件
+# 【相对路径】：相对于执行程序文件的目录
+# 我运行的是15-文件操作文件夹下的py文件，所以【相对路径】就为 file_child/file2.txt
+with open("file_child/file2.txt") as file4:
+    content4 = file4.read()
+    print(content4)  # I am file_child/file2.txt
+
+# 【绝对路径】：带有盘符的全路径
+# E:/Coding/pycharm_project/python-study/15-文件操作/file_child/file2.txt 就是我文件的全路径
+all_path = "E:/Coding/pycharm_project/python-study/15-文件操作/file_child/file2.txt"
+with open(all_path) as file5:
+    content5 = file5.read()
+    print(content5)
+
 
