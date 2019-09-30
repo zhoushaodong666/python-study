@@ -48,7 +48,7 @@ with open("file1.txt") as file3:
     print(content3) # I am a file
 
 
-# 读取子文件夹下的文件
+# 2.读取子文件夹下的文件
 # 【相对路径】：相对于执行程序文件的目录
 # 我运行的是15-文件操作文件夹下的py文件，所以【相对路径】就为 file_child/file2.txt
 with open("file_child/file2.txt") as file4:
@@ -61,5 +61,16 @@ all_path = "E:/Coding/pycharm_project/python-study/15-文件操作/file_child/fi
 with open(all_path) as file5:
     content5 = file5.read()
     print(content5)
+
+# 3.逐行读取文件内容
+
+with open("file3.txt") as file6:
+    for line_content in file6:
+        #print(line_content) 输出内容有空白行隔开 因为文件一个换行符，print()一个换行符
+        # 要消除这些多余的空白行，可在 print 语句中使用 rstrip()
+        print(line_content.rstrip())
+
+
+
 
 
