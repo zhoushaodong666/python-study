@@ -12,3 +12,12 @@ import re
 re.match(pattern, string, flags=0)
 """
 print(re.match("www","www.baidu.com").span())
+
+#re.search方法
+#re.search 扫描整个字符串并返回第一个成功的匹配。
+"""
+函数语法：
+
+re.search(pattern, string, flags=0)
+"""
+
