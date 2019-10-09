@@ -20,7 +20,15 @@ print(list2)  # ['ja', 'va', 'go', 'ru', 'st', 'sw', 'if']
 list3 = re.findall("[a-z]{2,}",str1)
 print(list3)  # ['java', 'go', 'rust', 'swift']
 
-# 如果只匹配长度为2-4个字符的字符串
-# 可以使用{2,4} 表示2个到4个
-list4 = re.findall("[a-z]{2,4}",str1)
-print(list4)  # ['java', 'go', 'rust', 'swif']
+# 如果只匹配长度为2-5个字符的字符串
+# 可以使用{2,4} 表示2个到5个
+list4 = re.findall("[a-z]{2,5}",str1)
+print(list4)  # ['java', 'go', 'rust', 'swift']
+
+# 贪婪模式
+# 前面的{2，}和{2,5} 为什么是匹配更多字符，而不是2个字符就停止，是因为python匹配是贪婪的，所以会尽可能的匹配更多的字符
+
+# 非贪婪模式
+# 在匹配的字符集后面加上?
+list5 = re.findall("[a-z]{2,5}?",str1)
+print(list5)
