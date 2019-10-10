@@ -31,4 +31,14 @@ print(list4)  # ['java', 'go', 'rust', 'swift']
 # 非贪婪模式
 # 在匹配的字符集后面加上?
 list5 = re.findall("[a-z]{2,5}?",str1)
-print(list5)
+
+# 非贪婪模式 所以没次都匹配最少的2个字符
+print(list5)  # ['ja', 'va', 'go', 'ru', 'st', 'sw', 'if']
+
+# "*" 匹配0次或多次
+str2 = "pytho1python2pythonn"
+
+# 正则表达式"python*" *限制了前面的字符"n" 可以有0个或多个 所以 pytho、python、pythonn都符合
+list6 = re.findall("python*",str2)
+print(list6)  # ['pytho', 'python', 'pythonn']
+
