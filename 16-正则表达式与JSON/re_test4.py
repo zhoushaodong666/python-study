@@ -36,9 +36,19 @@ list5 = re.findall("[a-z]{2,5}?",str1)
 print(list5)  # ['ja', 'va', 'go', 'ru', 'st', 'sw', 'if']
 
 # "*" 匹配0次或多次
-str2 = "pytho1python2pythonn"
+# "+" 匹配1次或多次
+# "?" 匹配0次或1次
 
-# 正则表达式"python*" *限制了前面的字符"n" 可以有0个或多个 所以 pytho、python、pythonn都符合
+str2 = "pytho1python2pythonn"
+# 正则表达式"python*" "*"限制了前面的字符"n" 可以有0个或多个 所以 pytho、python、pythonn都符合
 list6 = re.findall("python*",str2)
 print(list6)  # ['pytho', 'python', 'pythonn']
+
+# 正则表达式"python+" "+"限制了前面的字符"n" 可以有1个或多个 所以 python、pythonn都符合
+list7 = re.findall("python+",str2)
+print(list7)  # ['python', 'pythonn']
+
+# 正则表达式"python?" "?"限制了前面的字符"n" 可以有0个或1个 所以 pytho、python、python都符合，第三个单词python来自pythonn前6个字符，因为python已经符合重复1次
+list8 = re.findall("python?",str2)
+print(list8)  # ['pytho', 'python', 'python']
 
