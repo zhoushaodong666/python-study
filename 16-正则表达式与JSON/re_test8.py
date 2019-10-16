@@ -24,4 +24,13 @@ print(sub2)  # RustJavaC++C#GoRust
 sub3 = re.sub("Python","Rust",str1,1)
 print(sub3)  # stJavaC++C#GoPython
 
+# 第2个参数使用函数
+# 在Python前后加上**
+def Convet2Go(value):
+    matched = value.group()
+    return "**"+matched+"**"
+sub4= re.sub("Python",Convet2Go,str1)
+print(sub4)  # **Python**JavaC++C#Go**Python**
+
+
 
