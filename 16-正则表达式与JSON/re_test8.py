@@ -25,8 +25,10 @@ sub3 = re.sub("Python","Rust",str1,1)
 print(sub3)  # stJavaC++C#GoPython
 
 # 第2个参数使用函数
+# 匹配返回的信息会传递进函数参数中，使用value.group() 可以获取匹配到的值 然后在return一个字符串回去，代表你要替换的值
 # 在Python前后加上**
 def Convet2Go(value):
+    print(value)
     matched = value.group()
     return "**"+matched+"**"
 sub4= re.sub("Python",Convet2Go,str1)
