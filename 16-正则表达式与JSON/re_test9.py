@@ -31,3 +31,9 @@ print(res2)  # <re.Match object; span=(0, 1), match='1'>
 # re.search 扫描整个字符串并返回第一个成功的匹配。
 res3 = re.search("\d",str2)
 print(res3)  # <re.Match object; span=(0, 1), match='1'>
+
+# Match对象调用group()获取匹配到的字符串
+print(res3.group())
+
+# Match对象调用span()获取匹配到的字符串的位置
+print(res3.span())
