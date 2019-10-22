@@ -16,7 +16,7 @@ print(mat.group(1))  #  is like the
 print(mat.group(2))  #  is beautiful
 
 # 一次输出第0 1 2个索引分组匹配的内容
-print(mat.group(0,1,2))  # 'Life is like the ocean and is beautiful', ' is like the ', ' is beautiful')
+print(mat.group(0,1,2))  # ('Life is like the ocean and is beautiful', ' is like the ', ' is beautiful')
 
 # 一次输出自定义分组匹配的内容
 print(mat.groups())  # (' is like the ', ' is beautiful')
