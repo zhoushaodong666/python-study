@@ -1,3 +1,4 @@
+import json
 # json
 # 是一种轻量级的数据交换格式 常用的数据交换格式还有xml
 # 优势
@@ -7,3 +8,7 @@
 # 4.网络传输效率高
 
 # 举例： {"name":"tom",age:12}
+json_str = "{'name':'tom','age':12}"
+
+json = json.loads(json_str)
+print(json)
