@@ -8,3 +8,7 @@ def double_num(x):
 list1 = [1,2,3,4,5]
 res = map(double_num,list1)
 print(list(res))  # [2, 4, 6, 8, 10]
+
+# map与lambda表达式
+res2 = map(lambda x:2*x,list1)
+print(list(res2))  # [2, 4, 6, 8, 10]
